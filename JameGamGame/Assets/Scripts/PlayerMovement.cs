@@ -20,4 +20,8 @@ public class PlayerMovement : MonoBehaviour
         playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rb.linearVelocity = playerInput.normalized * moveSpeed;
     }
+
+    public void Hit(float damage) {
+        currHealth -= damage;
+    }
 }
